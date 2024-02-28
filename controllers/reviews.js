@@ -1,4 +1,4 @@
-const tvModel = require('../models/tv')
+const TvModel = require('../models/tv')
 
 
 module.exports = {
@@ -12,7 +12,7 @@ async function create(req, res){
 	console.log('====================================')
 	try {
 		
-		const tvDoc = await tvModel.findById(req.params.id)
+		const tvDoc = await TvModel.findById(req.params.id)
 		
 		req.body.user = req.user._id
 		req.body.userName = req.user.name

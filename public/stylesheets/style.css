@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: #353838;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #ecf1f3;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -99,7 +99,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: #bdc1c5;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;

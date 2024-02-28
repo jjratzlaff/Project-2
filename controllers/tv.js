@@ -3,12 +3,11 @@ const TvModel = require('../models/tv')
 const PeformerModel = require('../models/performer');
 
 module.exports = {
-    new: newShow,
-    create, create,
+    new: newTv,
+    create: create,
     index,
     show
 }
-
 async function show(req, res) {
 
   
@@ -78,7 +77,7 @@ async function create(req, res) {
 	}
   }
 
-function newShow(req,res){
+function newTv(req,res){
 
 
 
