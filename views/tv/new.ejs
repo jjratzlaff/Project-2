@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add a Series</h2>
+    <form action="/tv" method="POST">
+        <label>Title:
+            <input type="text" name="title">
+        </label><br>
+        <label>Release Year:
+            <input type="number" name="releaseYear">
+        </label><br>
+        <label>Genre:
+            <select name="genre">
+                <option value="Drama">Drama</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Documentary">Documentary</option>
+            </select>
+            </label><br>
+        <label>Content Rating:
+            <select name="contentRating">
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="TV-14">TV-14</option>
+                <option value="R">R</option>
+            </select>
+        </label><br>
+        <label>Cast (separate actors by commas):
+            <input type="text" name="cast">
+        </label><br>
+        <label>Currently Released:
+            <input type="checkbox" name="nowShowing" checked>
+        </label><br>
+        <button type="submit">Add TV Series</button>
+    </form>
+</body>
+</html>
