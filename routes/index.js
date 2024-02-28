@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
   // in the student demo this was res.redirect('/movies'), what do you want?
   // This could be a landing page, or just redirect to your main resource page which you'll have an a tag that makes 
   // a request to `/auth/google` route below
+  res.render("index")
   //===============================================================================================
 });
 
