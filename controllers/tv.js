@@ -56,30 +56,30 @@ async function index(req, res){
 }
 
 async function create(req, res) {
-    console.log(req.body, "contents")
+
 	req.body.nowShowing = !!req.body.nowShowing;
 	
-    req.body.cast = req.body.cast.trim();
-
-	  if (req.body.cast) req.body.cast = req.body.cast.split(/\s*,\s*/);
-
-
-
+	for (let key in req.body) {
+	  if (req.body[key] === "") delete req.body[key];
+	}
 	try {
+	  const tvFromTheDatabase = await TvModel.create(req.body); 
+	 
+	  console.log(tvFromTheDatabase);
+  
 
-
-	  const createdTvDoc = await TvModel.create(req.body)
-
-	  res.redirect(`/tv/new`)
+	  res.redirect(`/tv/${tvFromTheDatabase._id}`);
 	} catch (err) {
+	  // Typically some sort of validation error
 	  console.log(err);
-	  res.redirect('/tv/new')
+	  res.render("tv/new", { errorMsg: err.message });
 	}
   }
+  
 
-function newTv(req,res){
+function newTv(req, res){
 
-
-
-    res.render('tv/new')
+	// res.render looks in our 
+	// views folder for the ejs page
+	res.render('tv/new')
 }
