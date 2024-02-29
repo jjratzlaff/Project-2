@@ -24,14 +24,14 @@ async function show(req, res) {
   
 	  console.log(tvFromTheDatabase);
 
-		const performersNotInThetv = await PeformerModel.find({_id: {$nin: tvFromTheDatabase.cast}})
+		const performersNotInTheTv = await PeformerModel.find({_id: {$nin: tvFromTheDatabase.cast}})
 		
   
 
 	
 	  res.render("tv/show", {
 		tv: tvFromTheDatabase, 
-		performers: performersNotInThetv
+		performers: performersNotInTheTv
 	  });
 	} catch (err) {
 	  console.log(err)

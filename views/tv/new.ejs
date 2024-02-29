@@ -6,37 +6,46 @@
     <title>Document</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
+
 <body>
-    <h2>Add a Series</h2>
-    <form action="/tv" method="POST">
-        <label>Title:
-            <input type="text" name="title">
-        </label><br>
-        <label>Release Year:
-            <input type="number" name="releaseYear">
-        </label><br>
-        <label>Genre:
-            <select name="genre">
-                <option value="Drama">Drama</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Documentary">Documentary</option>
-            </select>
+    <nav>
+		<a href="/performers/new">ADD CAST</a>
+		<a href="/tv/new">ADD TV SERIES</a>
+		<a href="/tv">ALL TV</a>
+	</nav>
+
+    <main>
+        <h2>Add a Series</h2>
+        <form action="/tv" method="POST">
+            <label>Title:
+                <input type="text" name="title">
             </label><br>
-        <label>Content Rating:
-            <select name="contentRating">
-                <option value="G">G</option>
-                <option value="PG">PG</option>
-                <option value="TV-14">TV-14</option>
-                <option value="R">R</option>
-            </select>
-        </label><br>
-        <label>Cast (separate actors by commas):
-            <input type="text" name="cast">
-        </label><br>
-        <label>Currently Released:
-            <input type="checkbox" name="nowShowing" checked>
-        </label><br>
-        <button type="submit">Add TV Series</button>
-    </form>
+            <label>Release Year:
+                <input type="number" name="releaseYear">
+            </label><br>
+            <label>Genre:
+                <select name="genre">
+                    <option value="Drama">Drama</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Documentary">Documentary</option>
+                </select>
+                </label><br>
+            <label>Content Rating:
+                <select name="contentRating">
+                    <option value="G">G</option>
+                    <option value="PG">PG</option>
+                    <option value="TV-14">TV-14</option>
+                    <option value="R">R</option>
+                </select>
+            </label><br>
+            <label>Cast (separate actors by commas):
+                <input type="text" name="cast">
+            </label><br>
+            <label>Currently Released:
+                <input type="checkbox" name="nowShowing" checked>
+            </label><br>
+            <button type="submit">Add TV Series</button>
+        </form>
+    </main>
 </body>
 </html>
