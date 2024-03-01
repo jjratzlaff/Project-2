@@ -37,7 +37,6 @@ async function create(req, res){
 
 }
 
-// Include the next parameter - used for error handling in the catch
 async function deleteOne(req, res) {
     try {
         const tvDoc = await TvModel.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id})
@@ -69,14 +68,14 @@ async function update(req, res) {
    
     const tvDoc = await TvModel.findOne({'reviews._id': req.params.id});
     
-    const reviewSubdoc = TvModel.reviews.id(req.params.id);
+    const reviewSubdoc = tvDoc.reviews.id(req.params.id);
     
-    if (!commentSubdoc.userId.equals(req.user._id)) return res.redirect(`/tv/${tvDoc._id}`);
+    if (!reviewSubdoc.user.equals(req.user._id)) return res.redirect(`/tv/${tvDoc._id}`);
    
-    commentSubdoc.text = req.body.text;
+    reviewSubdoc.content = req.body.text;
     try {
       await tvDoc.save();
-    } catch (e) {
+    } catch (err) {
       console.log(err);
     }
 
