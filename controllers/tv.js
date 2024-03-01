@@ -70,7 +70,7 @@ async function create(req, res) {
 
 	  res.redirect(`/tv/${tvFromTheDatabase._id}`);
 	} catch (err) {
-	  // Typically some sort of validation error
+	
 	  console.log(err);
 	  res.render("tv/new", { errorMsg: err.message });
 	}
@@ -79,7 +79,5 @@ async function create(req, res) {
 
 function newTv(req, res){
 
-	// res.render looks in our 
-	// views folder for the ejs page
 	res.render('tv/new')
 }

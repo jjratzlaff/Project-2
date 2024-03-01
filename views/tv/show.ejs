@@ -10,7 +10,7 @@
 
 <body>
 	<nav>
-		  <a href="/performers/new">ADD PERFORMER</a>
+		  <a href="/performers/new">ADD CAST</a>
 		  <a href="/tv/new">ADD TV SHOW</a>
 		  <a href="/tv">ALL TV</a>
 	  </nav>
@@ -24,18 +24,15 @@
 			<div>
 				<%= tv.releaseYear %>
 			</div>
-			<div>Rating: </div>
-			<div>
-				<%= tv.mpaaRating %>
 			</div>
-			<div>Now Showing: </div>
+			<div>Released: </div>
 			<div>
 				<%= tv.nowShowing ? 'Yes' : 'Nope' %>
 			</div>
 			<div>Cast:</div>
 			<ul>
 				<% tv.cast.forEach(p => { %>
-                    <li><%= p.name %><small><%= p.born.toLocaleDateString() %></small></li>
+                    <li><%= p.name %></li>
                    <% }) %>
 			</ul>
 		</section>
@@ -87,6 +84,23 @@
 					<td><%= r.createdAt.toLocaleDateString() %></td>
 					<td><%= r.content %></td>
 					<td><%= r.rating %></td>
+
+                    <td>
+                        <% if (user && user._id.equals(r.user)) { %>
+                        <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+                        <!-- Value attribute is being set to the comment's current text -->
+                        <input name="text" value="<%= r.text %>">
+                        <button type="submit">Update Review</button>
+                      </form>
+                      <% } %>
+                    </td>
+                    <td>
+                        <% if (user && user._id.equals(r.user)) { %>
+                          <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                            <button type="submit">X</button>
+                          </form>
+                        <% } %>
+                    </td>
 				  </tr>
 				<% }); %>
 			  </tbody>

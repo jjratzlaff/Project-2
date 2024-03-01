@@ -32,9 +32,9 @@ const tvSchema = new Schema({
   nowShowing: Boolean,
 
   cast: [{
-    type: Schema.Types.ObjectId, // this is from mongoose
-    ref: 'Performer' // Performer is referencing the model name that 
-    // you are creating the relationship with, mongoose.model('Performer', performerSchema);
+    type: Schema.Types.ObjectId, // from mongoose
+    ref: 'Performer' 
+    
   }],
   reviews: [reviewSchema]
 }, {

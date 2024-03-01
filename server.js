@@ -37,6 +37,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 // mount the session middleware
 app.use(session({
   store: MongoStore.create({
