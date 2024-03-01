@@ -11,11 +11,11 @@ async function addToCast(req, res){
 	
 	
 	try {
-		// Find the tv (req.params comes from the http request)
+		
 		const tvDoc = await TvModel.findById(req.params.tvId);
 		// add the performers id to the tvDoc.cast array
 		tvDoc.cast.push(req.body.performerId);
-		// we mutated the tvDoc, so we have to tell the database!
+		
 		await tvDoc.save()
 		// redirect the client back to the tvs show page!
 		res.redirect(`/tv/${req.params.tvId}`)
@@ -30,7 +30,6 @@ async function addToCast(req, res){
 
 async function create(req, res) {
 
-	// https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off
 	const s = req.body.born;
 	
 	req.body.born = `${s.substr(5, 2)}-${s.substr(8, 2)}-${s.substr(0, 4)}`;
