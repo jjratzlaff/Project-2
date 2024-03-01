@@ -14,7 +14,7 @@ This app is designed to catalog details and reviews of TV series. You can add TV
 
 https://wild-gold-haddock-hat.cyclic.app/
 
-## Planned future enhancements (icebox items).
+## Planned future enhancements
 
 Add poster (image) functionality, Add Like button for other user reviews, Add "watched" button and list watched movies on user homepage
 
