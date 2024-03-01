@@ -1,13 +1,28 @@
-A README.md file with these sections (here's a basic template):
+## Welcome to the TV Review Database!
 
-☐ App Title: Contains a description of what the app does and optional background info.
+This app is designed to catalog details and reviews of TV series. You can add TV shows and review existing shows displayed on the database.
 
-☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
+## Technologies Used
+- Expressjs
+- Mongoosejs
+- MongoDB
+- Javascript
+- Nodejs
+- Ejs
 
-☐ Technologies Used: List of the technologies used.
+## Click the link to get started!
 
-☐ Getting Started: Include a link to the deployed app and your Trello board with the project's planning.
+https://wild-gold-haddock-hat.cyclic.app/
 
-☐ Next Steps: Planned future enhancements (icebox items).
+## Planned future enhancements (icebox items).
 
-Note: Don't underestimate the value of a well crafted README.md. The README.md introduces your project to prospective employers and forms their first impression of your work!
+Add poster (image) functionality, Add Like button for other user reviews, Add "watched" button and list watched movies on user homepage
+
+
+
+
+<img width="1105" alt="Screen Shot 2024-03-01 at 10 19 49 AM" src="https://github.com/jjratzlaff/Project-2/assets/156650294/46514eb6-abb8-4d5b-b481-3bf04d2f1899">
+
+
+<img width="1103" alt="Screen Shot 2024-03-01 at 10 20 53 AM" src="https://github.com/jjratzlaff/Project-2/assets/156650294/9786804c-4d89-4e4e-be10-7e5a9cbdaf02">
+
