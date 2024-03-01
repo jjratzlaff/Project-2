@@ -28,7 +28,7 @@ const tvSchema = new Schema({
   title: String,
   releaseYear: Number,
   genre: String,
-  contentRating: String,
+  mpaaRating: String,
   nowShowing: Boolean,
 
   cast: [{
