@@ -84,7 +84,7 @@
 					<td><%= r.createdAt.toLocaleDateString() %></td>
 					<td><%= r.content %></td>
 					<td><%= r.rating %></td>
-
+                    
                     <td>
                         <% if (user && user._id.equals(r.user)) { %>
                         <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
